@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Seminarska - Kulinarstvo</title>    
+    
+    <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+        }
+        .style3
+        {
+            width: 222px;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="wrapper">
+            <div id="logo">
+              <h1>Гурман</h1>
+              <p>Феноменална храна и амбиент!</p>
+            </div>
+            <div <%--id="nav"--%>>
+              <div>
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" 
+                      NodeIndent="10" ShowExpandCollapse="False" Font-Bold="True">
+                        <ParentNodeStyle Font-Bold="False" />
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                        <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                            HorizontalPadding="0px" VerticalPadding="0px" />
+                        <NodeStyle Font-Names="Verdana" Font-Size="14pt" ForeColor="#F4C389" 
+                            HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" 
+                            Font-Underline="True" />
+                  </asp:TreeView>
+              </div>
+            </div>
+            <div>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            </div>
+            <div>
+            
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+                <asp:Label ID="lblKorisnik" runat="server" Font-Bold="True" Font-Size="Medium" 
+                    ForeColor="#5555DD"></asp:Label>
+&nbsp;&nbsp;
+                <asp:Button ID="btnNajaviSe" runat="server" BackColor="#7C0000" 
+                    BorderStyle="None" Font-Bold="True" Font-Underline="True" ForeColor="#F4C389" 
+                    onclick="btnNajaviSe_Click" Text="Најави се" />
+            
+            &nbsp;<asp:Button ID="btnDodadi" runat="server" BackColor="#7C0000" 
+                    BorderStyle="None" Enabled="False" Font-Bold="True" Font-Underline="True" 
+                    ForeColor="#F4C389" onclick="btnDodadi_Click" Text="Додади рецепт" 
+                    Visible="False" />
+            
+            </div>
+            </div><br />      
+    </div>     
+        <table align="center" class="style1">
+            <tr>
+                <td class="style2" colspan="3">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td align="left" class="style3">
+                    &nbsp;</td>
+                <td align="center">
+    <asp:ContentPlaceHolder id="body1" runat="server"></asp:ContentPlaceHolder>     
+                    <br />
+    <asp:ContentPlaceHolder id="footer1" runat="server"></asp:ContentPlaceHolder>
+    
+                    <br />
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+    
+    <div class="clear"> </div>
+      <div id="footer">
+        <p>copyright &copy; 2009</p>
+      </div>
+    </form>
+</body>
+</html>

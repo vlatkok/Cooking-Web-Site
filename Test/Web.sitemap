@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="GlavnaStranica.aspx" title=""  description="GLAVNA">
+      <siteMapNode url="GlavnaStranica.aspx?d=doma" title="Дома"  description="GLAVNA" />
+        <siteMapNode url="Registracija.aspx" title="Регистрација"  description="Registracija" />
+        <siteMapNode url="Recepti.aspx?tip=salati" title="Салати"  description="Salati" />
+        <siteMapNode url="Recepti.aspx?tip=predjadenja" title="Предјадења"  description="Predjadenja" />
+        <siteMapNode url="Recepti.aspx?tip=glavniJadenja" title="Главни јадења"  description="Glavni jadenja" />
+        <siteMapNode url="Recepti.aspx?tip=deserti" title="Десерти"  description="Deserti" />
+      </siteMapNode>
+</siteMap>
